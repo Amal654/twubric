@@ -1,10 +1,12 @@
+# Twubric
+
 ## Overview
 
-This is a simple web application designed to help social media users review their followers, view their Twubric scores, filter and sort them based on various criteria, and optionally remove certain followers.
+This is a simple web application designed to help social media users review their followers view their Twubric scores, filter and sort them based on various criteria and optionally remove certain followers.
 
 ## Features
 
-- **View Twubric Scores:** See Twubric scores of your followers, which are calculated based on criteria like Friends, Influence, and Chirpiness.
+- **View Twubric Scores:** See Twubric scores of your followers, which are calculated based on criteria.
 - **Filtering:** Filter followers based on their join dates within a specified range.
 - **Sorting:** Sort followers based on their Twubric scores or individual criteria such as Friends, Influence, and Chirpiness.
 - **Removal:** Optionally remove followers directly from the application.
@@ -13,7 +15,7 @@ This is a simple web application designed to help social media users review thei
 
 1. **User listing**
 
-   - Upon loading, you can see a list of your followers along with their profile picture, Twubric scores, total followers and their category, joining date displayed on the home page.
+   - Upon loading, you can see a list of your followers along with their profile picture, Twubric scores, total followers with their category and joining date displayed on the home page.
    - Twubric scores are calculated based on the criteria and is shown with total followers.
 
 2. **Filtering**
