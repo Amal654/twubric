@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple web application designed to help social media users review their followers, view their Twubric scores, filter and sort them based on various criteria, and optionally remove certain followers.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **View Twubric Scores:** See Twubric scores of your followers, which are calculated based on criteria like Friends, Influence, and Chirpiness.
+- **Filtering:** Filter followers based on their join dates within a specified range.
+- **Sorting:** Sort followers based on their Twubric scores or individual criteria such as Friends, Influence, and Chirpiness.
+- **Removal:** Optionally remove followers directly from the application.
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **User listing**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   - Upon loading, you can see a list of your followers along with their profile picture, Twubric scores, total followers and their category, joining date displayed on the home page.
+   - Twubric scores are calculated based on the criteria and is shown with total followers.
 
-### `npm test`
+2. **Filtering**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   - Use the calendar filters provided on the home page to filter followers based on their join dates within a specific range.
+   - Click on "Search" to apply the filter and see the updated list of followers.
 
-### `npm run build`
+3. **Sorting**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - Sort followers based on their Twubric scores or individual criteria such as Friends, Influence, and Chirpiness.
+   - Click on the criteria you want to sort by, and the list will be sorted accordingly.
+   - Clicking again on the same criteria toggles between ascending and descending order.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Visual representation**
+   - Each users followers count is represented in a pie chart.
+   - All criteria is differentiated with colors.
+   - Upon hovering the mouse over the pie chart, the count of each category is displayed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. **Removal:**
+   - Each follower entry includes a "Remove" option.
+   - Click on "Remove" to initiate the removal process for a particular follower.
+   - An alert dialog will confirm your action, and upon confirmation, the follower will be removed from your list.
 
-### `npm run eject`
+## Twubric Score Calculation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Criteria:** Friends, Influence, Chirpiness
+- **Weights:**
+  - Friends: 2
+  - Influence: 4
+  - Chirpiness: 4
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository to your local machine.
+2. Install dependencies using `npm install`.
+3. Run the application using `npm start`.
+4. Access the application through the provided localhost URL.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
+- **React:** The frontend of the application is built using React.js.
+- **Tailwind CSS:** Styling is done using Tailwind CSS framework.
+- **ShadCN:** Shadcn provides contemporary and minimalist design straight out of the box, providing a sleek and visually appealing user interface. It have built-in interactions and animations for dropdowns, alerts, and dialogs add toast.
+- **Zod:** Zod is used for form validation.
+- **Lucide React:** Lucide React icons are used for visual elements.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Contributions are welcome. Please feel free to open an issue or submit a pull request with any improvements or features.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

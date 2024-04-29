@@ -5,6 +5,7 @@ const Sorting = ({ onSort }) => {
   const [sortingCriteria, setSortingCriteria] = useState(null);
   const [isAscending, setIsAscending] = useState(true);
 
+  // Sort fucntionality
   const handleSortToggle = (criteria) => {
     if (sortingCriteria === criteria) {
       setIsAscending((prevState) => !prevState);
@@ -16,6 +17,7 @@ const Sorting = ({ onSort }) => {
     }
   };
   
+  // Sort icon
   const renderSortIcon = (criteria) => {
     if (sortingCriteria === criteria) {
       return isAscending ? <MoveDown size={14} /> : <MoveUp size={14} />;

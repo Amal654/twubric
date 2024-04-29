@@ -14,6 +14,8 @@ import {
 } from "../../components/ui/alert-dialog";
 
 const HomePage = ({ data, twubricScore, onRemove }) => {
+
+  // Remove user functionality
   const handleRemove = (index) => {
     const removedUser = data[index].fullname;
     onRemove(index);
@@ -22,8 +24,6 @@ const HomePage = ({ data, twubricScore, onRemove }) => {
       variant: "destructive",
     });
   };
-
-  console.log("Data:", data);
 
   return (
     <div className="grid lg:grid-cols-3 gap-8 md:grid-cols-2 w-full my-8">
@@ -42,7 +42,7 @@ const HomePage = ({ data, twubricScore, onRemove }) => {
                     <img
                       src={userData.image}
                       alt={`Profile of ${userData.fullname}`}
-                      className="rounded-full mb-2 border-2 group-hover:shadow-md group-hover:border-cyan-100 transition-all duration-200"
+                      className="rounded-full mb-2 border-2 group-hover:shadow-lg group-hover:border-slate-500 transition-all duration-200"
                       width={64}
                       height={64}
                     />

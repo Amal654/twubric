@@ -9,6 +9,22 @@ import { Toaster } from "./components/ui/toaster";
 function App() {
   const [data, setData] = useState(null);
 
+  // Calculate twubric score
+  const calculateTwubricScore = (user) => {
+    const { friends, influence, chirpiness } = user.twubric;
+    const weights = {
+      friends: 2,
+      influence: 4,
+      chirpiness: 4,
+    };
+    return (
+      friends * weights.friends +
+      influence * weights.influence +
+      chirpiness * weights.chirpiness
+    );
+  };
+
+  // Update data with twubric score
   useEffect(() => {
     const updatedData = TwubricData.map((user) => {
       if (user.twubric) {
@@ -27,32 +43,7 @@ function App() {
     setData(updatedData);
   }, []);
 
-  console.log("new data", data);
-
-  const calculateTwubricScore = (user) => {
-    const { friends, influence, chirpiness } = user.twubric;
-    const weights = {
-      friends: 2,
-      influence: 4,
-      chirpiness: 4,
-    };
-    return (
-      friends * weights.friends +
-      influence * weights.influence +
-      chirpiness * weights.chirpiness
-    );
-  };
-
-  if (data !== null && Array.isArray(data)) {
-    const score = data.map((user) => {
-      return user.twubric.twubricScore;
-    });
-
-    console.log(score);
-  } else {
-    console.log("Data is null or not an array.");
-  }
-
+  // Sort functionality
   const handleSort = (criteria, isAscending) => {
     if (
       criteria === "twubricScore" ||
@@ -72,12 +63,14 @@ function App() {
     }
   };
 
+  // Remove user
   const handleRemove = (index) => {
     const updatedData = [...data];
     updatedData.splice(index, 1);
     setData(updatedData);
   };
 
+  // Update data with filtered data
   const handleFilter = (filteredData) => {
     setData(filteredData);
   };

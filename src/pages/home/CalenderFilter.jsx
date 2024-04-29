@@ -32,10 +32,14 @@ const FormSchema = z.object({
 });
 
 export function CalendarForm({ onFilter }) {
+
+  // Form validation
   const form = useForm({
     resolver: zodResolver(FormSchema),
   });
 
+
+  // Onsubmit function
   function onSubmit(data) {
     const filteredData = TwubricData.filter((user) => {
       const joinDate = new Date(user.join_date * 1000);
@@ -50,6 +54,7 @@ export function CalendarForm({ onFilter }) {
     onFilter(filteredData);
   }
 
+  // Reset function
   function handleReset() {
     form.reset();
     onFilter(TwubricData);
