@@ -89,7 +89,6 @@ function App() {
       <Toaster />
       <Layout>
         <Sorting onSort={handleSort} />
-
         <CalendarForm onFilter={handleFilter} />
         <HomePage
           data={data}

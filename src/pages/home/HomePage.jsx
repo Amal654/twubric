@@ -68,19 +68,22 @@ const HomePage = ({ data, twubricScore, onRemove }) => {
                 </div>
                 <div className="flex justify-between items-center mb-2">
                   <ul>
-                    <li className="text-[#2fa964]">
+                    <li className="text-[#2fa964] flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-[#2fa964]"></div>
                       Friends:{" "}
                       <span className="text-black">
                         {userData.twubric.friends}
                       </span>
                     </li>
-                    <li className="text-[#37a3d8]">
+                    <li className="text-[#37a3d8] flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-[#37a3d8]"></div>
                       Influence:{" "}
                       <span className="text-black">
                         {userData.twubric.influence}
                       </span>
                     </li>
-                    <li className="text-[#8860d0]">
+                    <li className="text-[#8860d0] flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-[#8860d0]"></div>
                       Chirpiness:{" "}
                       <span className="text-black">
                         {userData.twubric.chirpiness}
@@ -89,9 +92,13 @@ const HomePage = ({ data, twubricScore, onRemove }) => {
                   </ul>
                   <PieChart userData={userData} />
                 </div>
-                <p>
+                <p className="text-sm text-neutral-500">
                   Joined on:{" "}
-                  {new Date(userData.join_date * 1000).toLocaleDateString()}
+                  <span className="font-medium">{new Date(userData.join_date * 1000).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}</span>
                 </p>
                 <AlertDialog>
                   <AlertDialogTrigger className="text-black bg-white w-full py-2 rounded-lg border font-semibold hover:bg-black hover:text-white transition-all duration-300 ease-in mt-6">
@@ -103,7 +110,7 @@ const HomePage = ({ data, twubricScore, onRemove }) => {
                         Are you absolutely sure?
                       </AlertDialogTitle>
                       <AlertDialogDescription>
-                        This action cannot be undone. By clicking continue you
+                        This action cannot be undone until you click reset or refresh the page. By clicking continue you
                         will be unfollowing the user.
                       </AlertDialogDescription>
                     </AlertDialogHeader>

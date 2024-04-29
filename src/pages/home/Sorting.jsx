@@ -26,8 +26,8 @@ const Sorting = ({ onSort }) => {
   return (
     <div className=" py-8">
       <div className="flex gap-8 flex-wrap">
-        <button onClick={() => handleSortToggle("total")} className="flex gap-1 items-center">
-          Twubric Score {renderSortIcon("total")}
+        <button onClick={() => handleSortToggle("twubricScore")} className="flex gap-1 items-center">
+          Twubric Score {renderSortIcon("twubricScore")}
         </button>
         <button onClick={() => handleSortToggle("friends")} className="flex gap-1 items-center">
           Friends {renderSortIcon("friends")}

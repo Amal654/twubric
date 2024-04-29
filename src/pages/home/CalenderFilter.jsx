@@ -44,6 +44,7 @@ export function CalendarForm({ onFilter }) {
 
     toast({
       title: `Found ${filteredData.length} profiles`,
+      variant: "destructive"
     });
 
     onFilter(filteredData);
@@ -52,6 +53,10 @@ export function CalendarForm({ onFilter }) {
   function handleReset() {
     form.reset();
     onFilter(TwubricData);
+    toast({
+      title: "Page resetted",
+      variant: "destructive"
+    })
   }
 
   return (
@@ -143,7 +148,7 @@ export function CalendarForm({ onFilter }) {
           )}
         />
         <div className="flex gap-4">
-        <Button type="button" onClick={handleReset} variant="outline">
+          <Button type="button" onClick={handleReset} variant="outline">
             Reset
           </Button>
           <Button type="submit">Search</Button>
