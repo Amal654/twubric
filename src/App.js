@@ -8,6 +8,7 @@ import { Toaster } from "./components/ui/toaster";
 
 function App() {
   const [data, setData] = useState(null);
+  const [newData, setNewData] = useState(null);
 
   // Calculate twubric score
   const calculateTwubricScore = (user) => {
@@ -41,6 +42,7 @@ function App() {
       }
     });
     setData(updatedData);
+    setNewData(updatedData);
   }, []);
 
   // Sort functionality
@@ -80,7 +82,7 @@ function App() {
       <Toaster />
       <Layout>
         <Sorting onSort={handleSort} />
-        <CalendarForm onFilter={handleFilter} updatedData={data}/>
+        <CalendarForm onFilter={handleFilter} updatedData={newData}/>
         <HomePage
           data={data}
           twubricScore={calculateTwubricScore}

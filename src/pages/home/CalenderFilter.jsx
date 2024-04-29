@@ -31,7 +31,7 @@ const FormSchema = z.object({
   }),
 });
 
-export function CalendarForm({ onFilter, updatedData }) {
+export function CalendarForm({ onFilter, newData }) {
 
   // Form validation
   const form = useForm({
@@ -57,7 +57,7 @@ export function CalendarForm({ onFilter, updatedData }) {
   // Reset function
   function handleReset() {
     form.reset();
-    onFilter(updatedData);
+    onFilter(newData);
     toast({
       title: "Page resetted",
       variant: "destructive"
