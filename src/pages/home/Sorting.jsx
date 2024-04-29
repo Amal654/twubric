@@ -41,6 +41,7 @@ const Sorting = ({ onSort }) => {
           Chirpiness {renderSortIcon("chirpiness")}
         </button>
       </div>
+      <p className="text-center mt-2 text-xs text-slate-500">(On first click the data is arranged in accending order)</p>
     </div>
   );
 };

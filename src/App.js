@@ -80,7 +80,7 @@ function App() {
       <Toaster />
       <Layout>
         <Sorting onSort={handleSort} />
-        <CalendarForm onFilter={handleFilter} />
+        <CalendarForm onFilter={handleFilter} updatedData={data}/>
         <HomePage
           data={data}
           twubricScore={calculateTwubricScore}
