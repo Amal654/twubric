@@ -19,3 +19,11 @@ code {
 .rdp-vhidden{
   display: none;
 }
+
+.rdp-dropdown_month > div{
+  display: none;
+}
+
+.rdp-dropdown_month + div > div {
+  display: none;
+}

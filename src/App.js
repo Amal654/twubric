@@ -1,4 +1,3 @@
-// App.js
 import { useEffect, useState } from "react";
 import TwubricData from "./data/data.json";
 import Layout from "./components/layout/Layout";
@@ -6,7 +5,6 @@ import HomePage from "./pages/home/HomePage";
 import Sorting from "./pages/home/Sorting";
 import { CalendarForm } from "./pages/home/CalenderFilter";
 import { Toaster } from "./components/ui/toaster";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 
 function App() {
   const [data, setData] = useState(null);

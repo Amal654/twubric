@@ -18,7 +18,7 @@ function Calendar({
       className={cn("p-3", className)}
       classNames={{
         dropdown_year:"flex",
-        caption_dropdowns: "flex",
+        caption_dropdowns: "flex text-sm items-center font-semibold text-black gap-6",
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
         month: "space-y-4",
         caption: "flex justify-center pt-1 relative items-center",
